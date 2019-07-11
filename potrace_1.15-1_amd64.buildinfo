@@ -1,0 +1,183 @@
+Format: 1.0
+Source: potrace
+Binary: potrace libpotrace0 libpotrace-dev
+Architecture: amd64
+Version: 1.15-1
+Checksums-Md5:
+ 101db61892877d7fb06d0606c70683ef 13004 libpotrace-dev_1.15-1_amd64.deb
+ d82c30d24089e9a7250567e9f15215b5 22504 libpotrace0-dbgsym_1.15-1_amd64.deb
+ 485bfbf6f35f8459c1d6e29cd94245ff 40968 libpotrace0_1.15-1_amd64.deb
+ 15746a7852d2ee32ac972b726414d488 97748 potrace-dbgsym_1.15-1_amd64.deb
+ abc7f8b159ac9b32fa8d54978fa644d6 132028 potrace_1.15-1_amd64.deb
+Checksums-Sha1:
+ 3208ac1a81976e53ba4bcb56c0970093a8fc823c 13004 libpotrace-dev_1.15-1_amd64.deb
+ 7f1d837849a1788b594d12874f5d3290190ddcc6 22504 libpotrace0-dbgsym_1.15-1_amd64.deb
+ 07bd96d48f8fe2c34db33aa63b85b45f4ae16ddd 40968 libpotrace0_1.15-1_amd64.deb
+ 8abff58a1ced2aca2c5730c8c470455e7930414d 97748 potrace-dbgsym_1.15-1_amd64.deb
+ cbd462b2c8845514114d06db8ed74a8b2b71352f 132028 potrace_1.15-1_amd64.deb
+Checksums-Sha256:
+ b63f2090a8d0d8a846e287a48bf37bc227a141797516ef3b2dad3be4243e89e7 13004 libpotrace-dev_1.15-1_amd64.deb
+ b8e33e2614eee58fbe6b027c2f096d47dd96d52f4135dd2085980cfd5e70b3ba 22504 libpotrace0-dbgsym_1.15-1_amd64.deb
+ 93a8de67610da93804814257c82a7c7946b4a7098de002721a2ab78b7c3498af 40968 libpotrace0_1.15-1_amd64.deb
+ ac1c8683891939312e7f5a86d3a2d8628d5ed26580e91a0a8210595c389997e8 97748 potrace-dbgsym_1.15-1_amd64.deb
+ a1573478be54736de13c898f01beacd961acb2a7ae954f8355b6a996cb4fb236 132028 potrace_1.15-1_amd64.deb
+Build-Origin: Kali
+Build-Architecture: amd64
+Build-Date: Thu, 11 Jul 2019 10:04:28 -0500
+Installed-Build-Depends:
+ autoconf (= 2.69-11),
+ automake (= 1:1.16.1-4),
+ autopoint (= 0.19.8.1-9),
+ autotools-dev (= 20180224.1),
+ base-files (= 1:2019.1.1),
+ base-passwd (= 3.5.46),
+ bash (= 5.0-2),
+ binutils (= 2.31.1-11),
+ binutils-common (= 2.31.1-11),
+ binutils-x86-64-linux-gnu (= 2.31.1-11),
+ bsdmainutils (= 11.1.2+b1),
+ bsdutils (= 1:2.33.1-0.1),
+ build-essential (= 12.6),
+ bzip2 (= 1.0.6-9),
+ coreutils (= 8.30-1),
+ cpp (= 4:8.3.0-1),
+ cpp-8 (= 8.3.0-6),
+ dash (= 0.5.10.2-5),
+ debconf (= 1.5.70),
+ debhelper (= 12.1),
+ debianutils (= 4.8.6.1),
+ dh-autoreconf (= 19),
+ dh-strip-nondeterminism (= 1.1.1-1),
+ diffutils (= 1:3.6-1),
+ dpkg (= 1.19.2kali1),
+ dpkg-dev (= 1.19.2kali1),
+ dwz (= 0.12-3),
+ fdisk (= 2.33.1-0.1),
+ file (= 1:5.35-2),
+ findutils (= 4.6.0+git+20190209-2),
+ g++ (= 4:8.3.0-1),
+ g++-8 (= 8.3.0-6),
+ gawk (= 1:4.2.1+dfsg-1),
+ gcc (= 4:8.3.0-1),
+ gcc-8 (= 8.3.0-6),
+ gcc-8-base (= 8.3.0-6),
+ gettext (= 0.19.8.1-9),
+ gettext-base (= 0.19.8.1-9),
+ grep (= 3.3-1),
+ groff-base (= 1.22.4-2),
+ gzip (= 1.9-3),
+ hostname (= 3.21),
+ init-system-helpers (= 1.56+nmu1kali1),
+ intltool-debian (= 0.35.0+20060710.5),
+ libacl1 (= 2.2.52-5),
+ libarchive-zip-perl (= 1.64-1),
+ libasan5 (= 8.3.0-6),
+ libatomic1 (= 8.3.0-6),
+ libattr1 (= 1:2.4.47-4),
+ libaudit-common (= 1:2.8.4-2),
+ libaudit1 (= 1:2.8.4-2),
+ libbinutils (= 2.31.1-11),
+ libblkid1 (= 2.33.1-0.1),
+ libbsd0 (= 0.9.1-1),
+ libbz2-1.0 (= 1.0.6-9),
+ libc-bin (= 2.28-2),
+ libc-dev-bin (= 2.28-2),
+ libc6 (= 2.28-2),
+ libc6-dev (= 2.28-2),
+ libcap-ng0 (= 0.7.9-2),
+ libcc1-0 (= 8.3.0-6),
+ libcroco3 (= 0.6.12-3),
+ libdb5.3 (= 5.3.28+dfsg1-0.3),
+ libdebconfclient0 (= 0.247),
+ libdpkg-perl (= 1.19.2kali1),
+ libelf1 (= 0.175-2),
+ libfdisk1 (= 2.33.1-0.1),
+ libffi6 (= 3.2.1-9),
+ libfile-stripnondeterminism-perl (= 1.1.1-1),
+ libgcc-8-dev (= 8.3.0-6),
+ libgcc1 (= 1:8.3.0-6),
+ libgcrypt20 (= 1.8.4-5),
+ libgdbm-compat4 (= 1.18.1-3),
+ libgdbm6 (= 1.18.1-3),
+ libglib2.0-0 (= 2.58.3-1),
+ libgmp10 (= 2:6.1.2+dfsg-4),
+ libgomp1 (= 8.3.0-6),
+ libgpg-error0 (= 1.35-1),
+ libicu63 (= 63.1-6),
+ libisl19 (= 0.20-2),
+ libitm1 (= 8.3.0-6),
+ liblsan0 (= 8.3.0-6),
+ liblz4-1 (= 1.8.3-1),
+ liblzma5 (= 5.2.4-1),
+ libmagic-mgc (= 1:5.35-2),
+ libmagic1 (= 1:5.35-2),
+ libmount1 (= 2.33.1-0.1),
+ libmpc3 (= 1.1.0-1),
+ libmpfr6 (= 4.0.2-1),
+ libmpx2 (= 8.3.0-6),
+ libncurses6 (= 6.1+20181013-2),
+ libncursesw6 (= 6.1+20181013-2),
+ libpam-modules (= 1.3.1-5),
+ libpam-modules-bin (= 1.3.1-5),
+ libpam-runtime (= 1.3.1-5),
+ libpam0g (= 1.3.1-5),
+ libpcre3 (= 2:8.39-11),
+ libperl5.28 (= 5.28.1-4),
+ libpipeline1 (= 1.5.1-2),
+ libquadmath0 (= 8.3.0-6),
+ libreadline7 (= 7.0-5),
+ libseccomp2 (= 2.3.3-4),
+ libselinux1 (= 2.8-1+b1),
+ libsigsegv2 (= 2.12-2),
+ libsmartcols1 (= 2.33.1-0.1),
+ libstdc++-8-dev (= 8.3.0-6),
+ libstdc++6 (= 8.3.0-6),
+ libsystemd0 (= 240-6),
+ libtinfo6 (= 6.1+20181013-2),
+ libtool (= 2.4.6-9),
+ libtsan0 (= 8.3.0-6),
+ libubsan1 (= 8.3.0-6),
+ libuchardet0 (= 0.0.6-3),
+ libudev1 (= 240-6),
+ libunistring2 (= 0.9.10-1),
+ libuuid1 (= 2.33.1-0.1),
+ libxml2 (= 2.9.4+dfsg1-7+b3),
+ linux-libc-dev (= 4.19.20-1kali1),
+ login (= 1:4.5-1.1),
+ m4 (= 1.4.18-2),
+ make (= 4.2.1-1.2),
+ man-db (= 2.8.5-2),
+ mawk (= 1.3.3-17+b3),
+ ncurses-base (= 6.1+20181013-2),
+ ncurses-bin (= 6.1+20181013-2),
+ patch (= 2.7.6-3),
+ perl (= 5.28.1-4),
+ perl-base (= 5.28.1-4),
+ perl-modules-5.28 (= 5.28.1-4),
+ po-debconf (= 1.0.21),
+ readline-common (= 7.0-5),
+ sed (= 4.7-1),
+ sensible-utils (= 0.0.12),
+ sysvinit-utils (= 2.93-8),
+ tar (= 1.30+dfsg-5),
+ util-linux (= 2.33.1-0.1),
+ xz-utils (= 5.2.4-1),
+ zlib1g (= 1:1.2.11.dfsg-1),
+ zlib1g-dev (= 1:1.2.11.dfsg-1)
+Environment:
+ AR="xiar.pl"
+ CC="icc.pl"
+ CPP="icc.pl -E"
+ CXX="icpc.pl"
+ DEB_BUILD_OPTIONS="nocheck nodoc parallel=5"
+ DEB_BUILD_PROFILES="nobiarch nocheck nodoc"
+ DEB_CFLAGS_SET="-g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security"
+ DEB_CXXFLAGS_SET="-g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security"
+ DEB_FCFLAGS_SET="-g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -fstack-protector-strong -march=native -pipe -fstack-security-check"
+ DEB_FFLAGS_SET="-g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -fstack-protector-strong -march=native -pipe -fstack-security-check"
+ DEB_LDFLAGS_SET=""
+ DPKG_GENSYMBOLS_CHECK_LEVEL="1"
+ LANG="en_US.UTF-8"
+ LC_CTYPE="en_US.UTF-8"
+ MAKEFLAGS="-l 8"
+ SOURCE_DATE_EPOCH="1525288754"

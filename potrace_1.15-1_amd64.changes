@@ -1,0 +1,46 @@
+Format: 1.8
+Date: Wed, 02 May 2018 21:19:14 +0200
+Source: potrace
+Binary: potrace libpotrace0 libpotrace-dev
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: amd64
+Version: 1.15-1
+Distribution: unstable
+Urgency: low
+Maintainer: Bartosz Fenski <fenio@debian.org>
+Changed-By: Bartosz Fenski <fenio@debian.org>
+Description:
+ libpotrace-dev - development files for potrace library
+ libpotrace0 - library for tracing bitmaps
+ potrace    - utility to transform bitmaps into vector graphics
+Closes: 858763 870356 891396
+Changes:
+ potrace (1.15-1) unstable; urgency=low
+ .
+   * New upstream version.
+   * The Akamai Technologies paid volunteer days release.
+   * Multiarchify patch applied (Closes: #891396)
+   * Fixes security bug CVE-2017-12067 (Closes: #870356)
+   * Fixes security bug CVE-2017-7263 (Closes: #858763)
+   * Bumped Standards-Version (no changes needed).
+Checksums-Sha1:
+ 3208ac1a81976e53ba4bcb56c0970093a8fc823c 13004 libpotrace-dev_1.15-1_amd64.deb
+ 7f1d837849a1788b594d12874f5d3290190ddcc6 22504 libpotrace0-dbgsym_1.15-1_amd64.deb
+ 07bd96d48f8fe2c34db33aa63b85b45f4ae16ddd 40968 libpotrace0_1.15-1_amd64.deb
+ 8abff58a1ced2aca2c5730c8c470455e7930414d 97748 potrace-dbgsym_1.15-1_amd64.deb
+ 41e33858e5c2f1d642b75ebaf769c06549581d98 5998 potrace_1.15-1_amd64.buildinfo
+ cbd462b2c8845514114d06db8ed74a8b2b71352f 132028 potrace_1.15-1_amd64.deb
+Checksums-Sha256:
+ b63f2090a8d0d8a846e287a48bf37bc227a141797516ef3b2dad3be4243e89e7 13004 libpotrace-dev_1.15-1_amd64.deb
+ b8e33e2614eee58fbe6b027c2f096d47dd96d52f4135dd2085980cfd5e70b3ba 22504 libpotrace0-dbgsym_1.15-1_amd64.deb
+ 93a8de67610da93804814257c82a7c7946b4a7098de002721a2ab78b7c3498af 40968 libpotrace0_1.15-1_amd64.deb
+ ac1c8683891939312e7f5a86d3a2d8628d5ed26580e91a0a8210595c389997e8 97748 potrace-dbgsym_1.15-1_amd64.deb
+ 3c5f53247b80439753d1463ee2008f98768bd40878037d5d744c34112c7cc522 5998 potrace_1.15-1_amd64.buildinfo
+ a1573478be54736de13c898f01beacd961acb2a7ae954f8355b6a996cb4fb236 132028 potrace_1.15-1_amd64.deb
+Files:
+ 101db61892877d7fb06d0606c70683ef 13004 libdevel optional libpotrace-dev_1.15-1_amd64.deb
+ d82c30d24089e9a7250567e9f15215b5 22504 debug optional libpotrace0-dbgsym_1.15-1_amd64.deb
+ 485bfbf6f35f8459c1d6e29cd94245ff 40968 libs optional libpotrace0_1.15-1_amd64.deb
+ 15746a7852d2ee32ac972b726414d488 97748 debug optional potrace-dbgsym_1.15-1_amd64.deb
+ 2ee0e624e8c1e8b0ca74cc72b6a9f099 5998 graphics optional potrace_1.15-1_amd64.buildinfo
+ abc7f8b159ac9b32fa8d54978fa644d6 132028 graphics optional potrace_1.15-1_amd64.deb

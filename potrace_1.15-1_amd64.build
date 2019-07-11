@@ -1,0 +1,815 @@
+ dpkg-buildpackage -D -us -uc -ui -b -J5 -Pnobiarch,nocheck,nodoc -Zxz -z1
+dpkg-buildpackage: info: source package potrace
+dpkg-buildpackage: info: source version 1.15-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Bartosz Fenski <fenio@debian.org>
+ dpkg-source -Zxz -z1 --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean  --with autoreconf
+dh: warning: line 1 of /etc/dpkg/buildflags.conf is invalid, it has been ignored
+   dh_auto_clean
+	make -j1 distclean
+make[1]: Entering directory '/home/richard/potrace/potrace-1.15'
+Making distclean in src
+make[2]: Entering directory '/home/richard/potrace/potrace-1.15/src'
+ rm -f potrace mkbitmap
+test -z "libpotrace.la" || rm -f libpotrace.la
+rm -f ./so_locations
+rm -rf .libs _libs
+rm -f *.o
+test -z "libpotrace.la" || rm -f libpotrace.la
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f ./.deps/backend_dxf.Po
+rm -f ./.deps/backend_eps.Po
+rm -f ./.deps/backend_geojson.Po
+rm -f ./.deps/backend_pdf.Po
+rm -f ./.deps/backend_pgm.Po
+rm -f ./.deps/backend_svg.Po
+rm -f ./.deps/backend_xfig.Po
+rm -f ./.deps/bbox.Po
+rm -f ./.deps/bitmap_io.Po
+rm -f ./.deps/curve.Plo
+rm -f ./.deps/decompose.Plo
+rm -f ./.deps/flate.Po
+rm -f ./.deps/greymap.Po
+rm -f ./.deps/lzw.Po
+rm -f ./.deps/main.Po
+rm -f ./.deps/mkbitmap.Po
+rm -f ./.deps/potracelib.Plo
+rm -f ./.deps/potracelib_demo.Po
+rm -f ./.deps/progress_bar.Po
+rm -f ./.deps/render.Po
+rm -f ./.deps/trace.Plo
+rm -f ./.deps/trans.Po
+rm -f Makefile
+make[2]: Leaving directory '/home/richard/potrace/potrace-1.15/src'
+Making distclean in doc
+make[2]: Entering directory '/home/richard/potrace/potrace-1.15/doc'
+rm -rf .libs _libs
+test -z "potracelib.dvi potracelib-1up.ps potracelib.ps potracelib.pdf" || rm -f potracelib.dvi potracelib-1up.ps potracelib.ps potracelib.pdf
+rm -f *.lo
+test -z "potrace.1 mkbitmap.1" || rm -f potrace.1 mkbitmap.1
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[2]: Leaving directory '/home/richard/potrace/potrace-1.15/doc'
+Making distclean in check
+make[2]: Entering directory '/home/richard/potrace/potrace-1.15/check'
+ rm -f pgmdiff checkbin
+rm -rf .libs _libs
+rm -f *.o
+test -z "input-check.sh.log backend-check.sh.log potrace-check.sh.log postscript-check.sh.log pdf-check.sh.log mkbitmap-check.sh.log mkbitmap-input-check.sh.log binary-check.sh.log" || rm -f input-check.sh.log backend-check.sh.log potrace-check.sh.log postscript-check.sh.log pdf-check.sh.log mkbitmap-check.sh.log mkbitmap-input-check.sh.log binary-check.sh.log
+test -z "input-check.sh.trs backend-check.sh.trs potrace-check.sh.trs postscript-check.sh.trs pdf-check.sh.trs mkbitmap-check.sh.trs mkbitmap-input-check.sh.trs binary-check.sh.trs" || rm -f input-check.sh.trs backend-check.sh.trs potrace-check.sh.trs postscript-check.sh.trs pdf-check.sh.trs mkbitmap-check.sh.trs mkbitmap-input-check.sh.trs binary-check.sh.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f ./.deps/checkbin.Po
+rm -f ./.deps/pgmdiff.Po
+rm -f Makefile
+make[2]: Leaving directory '/home/richard/potrace/potrace-1.15/check'
+make[2]: Entering directory '/home/richard/potrace/potrace-1.15'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f config.h stamp-h1
+rm -f libtool config.lt
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f cscope.out cscope.in.out cscope.po.out cscope.files
+make[2]: Leaving directory '/home/richard/potrace/potrace-1.15'
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -f Makefile
+make[1]: Leaving directory '/home/richard/potrace/potrace-1.15'
+   dh_autoreconf_clean
+	rm -f -- ./INSTALL ./Makefile.in ./aclocal.m4 ./autom4te.cache/output.0 ./autom4te.cache/output.1 ./autom4te.cache/output.2 ./autom4te.cache/requests ./autom4te.cache/traces.0 ./autom4te.cache/traces.1 ./autom4te.cache/traces.2 ./check/Makefile.in ./compile ./config.h.in\~ ./configure ./depcomp ./doc/Makefile.in ./install-sh ./ltmain.sh ./m4/libtool.m4 ./missing ./src/Makefile.in ./test-driver
+	rm -f debian/autoreconf.before debian/autoreconf.after
+   dh_clean
+	rm -f debian/debhelper-build-stamp
+	cp -an --reflink=auto debian/.debhelper/bucket/files/8131853dbc8c3be5171fa96353de7a884a79d3f1d6b3fbf48f99037f5f95fe27 debian/.debhelper/bucket/files/8131853dbc8c3be5171fa96353de7a884a79d3f1d6b3fbf48f99037f5f95fe27.tmp
+	mv debian/.debhelper/bucket/files/8131853dbc8c3be5171fa96353de7a884a79d3f1d6b3fbf48f99037f5f95fe27.tmp config.guess
+	cp -an --reflink=auto debian/.debhelper/bucket/files/1ee0b1581032c46aac6ebd1de74b130f35082fb45a12e9ead42ad5c775f9b64f debian/.debhelper/bucket/files/1ee0b1581032c46aac6ebd1de74b130f35082fb45a12e9ead42ad5c775f9b64f.tmp
+	mv debian/.debhelper/bucket/files/1ee0b1581032c46aac6ebd1de74b130f35082fb45a12e9ead42ad5c775f9b64f.tmp config.sub
+	rm -rf debian/.debhelper/
+	rm -f debian/libpotrace-dev.debhelper.log debian/libpotrace0.debhelper.log debian/potrace.debhelper.log
+	rm -f -- debian/potrace.substvars debian/libpotrace0.substvars debian/libpotrace-dev.substvars debian/files
+	rm -fr -- debian/potrace/ debian/tmp/ debian/libpotrace0/ debian/libpotrace-dev/
+	find .  \( \( \
+		\( -path .\*/.git -o -path .\*/.svn -o -path .\*/.bzr -o -path .\*/.hg -o -path .\*/CVS -o -path .\*/.pc -o -path .\*/_darcs \) -prune -o -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} + \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} + \) \)
+ debian/rules build
+dh build  --with autoreconf
+dh: warning: line 1 of /etc/dpkg/buildflags.conf is invalid, it has been ignored
+   dh_update_autotools_config
+	install -d debian/.debhelper/bucket/files
+	cp -an --reflink=auto config.guess debian/.debhelper/bucket/files/8131853dbc8c3be5171fa96353de7a884a79d3f1d6b3fbf48f99037f5f95fe27.tmp
+	mv debian/.debhelper/bucket/files/8131853dbc8c3be5171fa96353de7a884a79d3f1d6b3fbf48f99037f5f95fe27.tmp debian/.debhelper/bucket/files/8131853dbc8c3be5171fa96353de7a884a79d3f1d6b3fbf48f99037f5f95fe27
+	cp -f /usr/share/misc/config.guess ./config.guess
+	cp -an --reflink=auto config.sub debian/.debhelper/bucket/files/1ee0b1581032c46aac6ebd1de74b130f35082fb45a12e9ead42ad5c775f9b64f.tmp
+	mv debian/.debhelper/bucket/files/1ee0b1581032c46aac6ebd1de74b130f35082fb45a12e9ead42ad5c775f9b64f.tmp debian/.debhelper/bucket/files/1ee0b1581032c46aac6ebd1de74b130f35082fb45a12e9ead42ad5c775f9b64f
+	cp -f /usr/share/misc/config.sub ./config.sub
+   dh_autoreconf
+	find ! -ipath "./debian/*" -a ! \( -path '*/.git/*' -o -path '*/.hg/*' -o -path '*/.bzr/*' -o -path '*/.svn/*' -o -path '*/CVS/*' \) -a  -type f -exec md5sum {} + -o -type l -printf "symlink  %p
+" > debian/autoreconf.before
+	grep -q ^XDT_ configure.ac
+	autoreconf -f -i
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+configure.ac:31: installing './compile'
+configure.ac:11: installing './install-sh'
+configure.ac:11: installing './missing'
+Makefile.am: installing './INSTALL'
+check/Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+	find ! -ipath "./debian/*" -a ! \( -path '*/.git/*' -o -path '*/.hg/*' -o -path '*/.bzr/*' -o -path '*/.svn/*' -o -path '*/CVS/*' \) -a  -type f -exec md5sum {} + -o -type l -printf "symlink  %p
+" > debian/autoreconf.after
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/home/richard/potrace/potrace-1.15'
+dh_auto_configure -- --with-libpotrace
+	./configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking --with-libpotrace
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether icc.pl accepts -g... yes
+checking for icc.pl option to accept ISO C89... none needed
+checking whether icc.pl understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of icc.pl... none
+checking what compiler options to use...  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by icc.pl... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from icc.pl object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... icc.pl -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if icc.pl supports -fno-rtti -fno-exceptions... yes
+checking for icc.pl option to produce PIC... -fPIC -DPIC
+checking if icc.pl PIC flag -fPIC -DPIC works... yes
+checking if icc.pl static flag -static works... no
+checking if icc.pl supports -c -o file.o... yes
+checking if icc.pl supports -c -o file.o... (cached) yes
+checking whether the icc.pl linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether to install the Potrace library... yes
+checking whether gcc has bug number 12243... maybe
+checking whether to use zlib... yes
+checking whether to default to metric units... no
+checking whether to default to a4 paper size... no
+checking whether to use the simplified progress bar... no
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking whether M_PI is declared... yes
+checking for deflate in -lz... yes
+checking for floor in -lm... yes
+checking for uint64_t... yes
+checking for getopt_long... yes
+checking whether getopt_long reorders its arguments... yes
+checking whether to use local getopt... no
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking for Intel 386... yes
+checking for inline... inline
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating doc/Makefile
+config.status: creating check/Makefile
+config.status: creating doc/potrace.1
+config.status: creating doc/mkbitmap.1
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+make[1]: Leaving directory '/home/richard/potrace/potrace-1.15'
+   dh_auto_build
+	make -j1
+make[1]: Entering directory '/home/richard/potrace/potrace-1.15'
+make  all-recursive
+make[2]: Entering directory '/home/richard/potrace/potrace-1.15'
+Making all in src
+make[3]: Entering directory '/home/richard/potrace/potrace-1.15/src'
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o main.o main.c
+In file included from main.h(15),
+                 from main.c(25):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from main.h(15),
+                 from main.c(25):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+main.c(522) (col. 32): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(522) (col. 47): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(522) (col. 62): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(522) (col. 79): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(528) (col. 31): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(528) (col. 45): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(537) (col. 32): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(537) (col. 47): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(543) (col. 31): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(864) (col. 38): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(865) (col. 40): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(866) (col. 36): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(867) (col. 36): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(868) (col. 36): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(869) (col. 36): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(882) (col. 27): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(882) (col. 47): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(885) (col. 28): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(885) (col. 48): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(889) (col. 27): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(889) (col. 47): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(892) (col. 28): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(892) (col. 48): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(899) (col. 25): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(899) (col. 53): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(901) (col. 32): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(901) (col. 60): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(909) (col. 25): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(909) (col. 53): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(919) (col. 21): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(935) (col. 26): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(935) (col. 52): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(938) (col. 26): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(938) (col. 52): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(941) (col. 21): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(941) (col. 43): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(946) (col. 21): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(948) (col. 29): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(962) (col. 26): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(962) (col. 52): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(964) (col. 33): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(966) (col. 33): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(966) (col. 59): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(969) (col. 26): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(969) (col. 52): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(971) (col. 33): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(973) (col. 33): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(973) (col. 59): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(977) (col. 26): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(980) (col. 26): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(983) (col. 26): remark #1572: floating-point equality and inequality comparisons are unreliable
+main.c(986) (col. 26): remark #1572: floating-point equality and inequality comparisons are unreliable
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o bitmap_io.o bitmap_io.c
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o backend_eps.o backend_eps.c
+In file included from curve.h(8),
+                 from backend_eps.c(30):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from curve.h(8),
+                 from backend_eps.c(30):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+backend_eps.c(172) (col. 10): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(172) (col. 18): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(172) (col. 26): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(174) (col. 17): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(174) (col. 27): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(174) (col. 37): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(176) (col. 19): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(176) (col. 29): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(198) (col. 12): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(258) (col. 7): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+backend_eps.c(260) (col. 27): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(283) (col. 27): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(291) (col. 29): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(296) (col. 30): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(298) (col. 30): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(336) (col. 13): remark #3280: declaration hides variable "cur" (declared at line 116)
+backend_eps.c(737) (col. 16): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(737) (col. 30): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(740) (col. 21): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(830) (col. 16): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(830) (col. 30): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_eps.c(833) (col. 21): remark #1572: floating-point equality and inequality comparisons are unreliable
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o flate.o flate.c
+flate.c(52) (col. 30): remark #869: parameter "filter" was never referenced
+flate.c(311) (col. 26): remark #869: parameter "f" was never referenced
+flate.c(363) (col. 22): remark #2259: non-pointer conversion from "int" to "char" may lose significant bits
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o greymap.o greymap.c
+greymap.c(999) (col. 16): remark #1572: floating-point equality and inequality comparisons are unreliable
+greymap.c(1010) (col. 35): warning #2279: printf/scanf format not a string literal and no format arguments
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o render.o render.c
+In file included from render.c(16):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from render.c(16):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+render.c(75) (col. 17): remark #1572: floating-point equality and inequality comparisons are unreliable
+render.c(75) (col. 37): remark #1572: floating-point equality and inequality comparisons are unreliable
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o backend_pgm.o backend_pgm.c
+In file included from main.h(15),
+                 from backend_pgm.h(12),
+                 from backend_pgm.c(17):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from main.h(15),
+                 from backend_pgm.h(12),
+                 from backend_pgm.c(17):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o backend_svg.o backend_svg.c
+In file included from curve.h(8),
+                 from backend_svg.c(18):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from curve.h(8),
+                 from backend_svg.c(18):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+backend_svg.c(163) (col. 11): remark #3280: declaration hides variable "cur" (declared at line 36)
+backend_svg.c(312) (col. 16): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_svg.c(312) (col. 30): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_svg.c(315) (col. 21): remark #1572: floating-point equality and inequality comparisons are unreliable
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o backend_xfig.o backend_xfig.c
+In file included from main.h(15),
+                 from backend_xfig.c(17):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from main.h(15),
+                 from backend_xfig.c(17):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o backend_dxf.o backend_dxf.c
+In file included from main.h(15),
+                 from backend_dxf.c(16):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from main.h(15),
+                 from backend_dxf.c(16):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+backend_dxf.c(60) (col. 14): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_dxf.c(163) (col. 14): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_dxf.c(163) (col. 24): remark #1572: floating-point equality and inequality comparisons are unreliable
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o backend_pdf.o backend_pdf.c
+In file included from main.h(15),
+                 from backend_pdf.c(19):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from main.h(15),
+                 from backend_pdf.c(19):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+backend_pdf.c(178) (col. 10): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_pdf.c(178) (col. 18): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_pdf.c(178) (col. 26): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_pdf.c(180) (col. 17): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_pdf.c(180) (col. 27): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_pdf.c(180) (col. 37): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_pdf.c(182) (col. 19): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_pdf.c(182) (col. 29): remark #1572: floating-point equality and inequality comparisons are unreliable
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o backend_geojson.o backend_geojson.c
+In file included from curve.h(8),
+                 from backend_geojson.c(18):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from curve.h(8),
+                 from backend_geojson.c(18):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+backend_geojson.c(59) (col. 20): remark #1572: floating-point equality and inequality comparisons are unreliable
+backend_geojson.c(59) (col. 32): remark #1572: floating-point equality and inequality comparisons are unreliable
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o lzw.o lzw.c
+lzw.c(168) (col. 18): remark #2259: non-pointer conversion from "int" to "char" may lose significant bits
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o progress_bar.o progress_bar.c
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o bbox.o bbox.c
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o trans.o trans.c
+In file included from trans.h(9),
+                 from trans.c(14):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from trans.h(9),
+                 from trans.c(14):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+trans.c(119) (col. 18): remark #1572: floating-point equality and inequality comparisons are unreliable
+/bin/bash ../libtool  --tag=CC   --mode=compile icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o curve.lo curve.c
+libtool: compile:  icc.pl -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c curve.c  -fPIC -DPIC -o .libs/curve.o
+In file included from curve.h(8),
+                 from curve.c(17):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from curve.h(8),
+                 from curve.c(17):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+libtool: compile:  icc.pl -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c curve.c -o curve.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=compile icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o trace.lo trace.c
+libtool: compile:  icc.pl -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c trace.c  -fPIC -DPIC -o .libs/trace.o
+In file included from curve.h(8),
+                 from trace.c(17):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from curve.h(8),
+                 from trace.c(17):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from trace.h(10),
+                 from trace.c(20):
+progress.h(33) (col. 14): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(126) (col. 12): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(132) (col. 12): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(137) (col. 10): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(246) (col. 10): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(515) (col. 6): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+trace.c(516) (col. 6): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+trace.c(684) (col. 14): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(716) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+trace.c(717) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+trace.c(740) (col. 18): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(780) (col. 20): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(795) (col. 20): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(872) (col. 18): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(981) (col. 13): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(989) (col. 12): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(1017) (col. 14): remark #1572: floating-point equality and inequality comparisons are unreliable
+trace.c(1039) (col. 14): remark #1572: floating-point equality and inequality comparisons are unreliable
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+libtool: compile:  icc.pl -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c trace.c -o trace.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=compile icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o decompose.lo decompose.c
+libtool: compile:  icc.pl -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c decompose.c  -fPIC -DPIC -o .libs/decompose.o
+In file included from curve.h(8),
+                 from decompose.c(18):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from curve.h(8),
+                 from decompose.c(18):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from decompose.h(10),
+                 from decompose.c(21):
+progress.h(33) (col. 14): remark #1572: floating-point equality and inequality comparisons are unreliable
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+libtool: compile:  icc.pl -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c decompose.c -o decompose.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=compile icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o potracelib.lo potracelib.c
+libtool: compile:  icc.pl -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c potracelib.c  -fPIC -DPIC -o .libs/potracelib.o
+In file included from curve.h(8),
+                 from potracelib.c(13):
+auxiliary.h(33) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from curve.h(8),
+                 from potracelib.c(13):
+auxiliary.h(34) (col. 9): remark #2259: non-pointer conversion from "long" to "double" may lose significant bits
+In file included from decompose.h(10),
+                 from potracelib.c(14):
+progress.h(33) (col. 14): remark #1572: floating-point equality and inequality comparisons are unreliable
+libtool: compile:  icc.pl -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c potracelib.c -o potracelib.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=link icc.pl  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -version-info 0:5:0 -rpath '/usr/lib/x86_64-linux-gnu' -export-symbols ./libpotrace-export.sym -no-undefined  -o libpotrace.la  curve.lo trace.lo decompose.lo potracelib.lo -lm 
+libtool: link: echo "{ global:" > .libs/libpotrace.ver
+libtool: link:  cat ./libpotrace-export.sym | sed -e "s/\(.*\)/\1;/" >> .libs/libpotrace.ver
+libtool: link:  echo "local: *; };" >> .libs/libpotrace.ver
+libtool: link:  icc.pl -shared  -fPIC -DPIC  .libs/curve.o .libs/trace.o .libs/decompose.o .libs/potracelib.o   -lm  -g -O2 -march=native   -Wl,-soname -Wl,libpotrace.so.0 -Wl,-version-script -Wl,.libs/libpotrace.ver -o .libs/libpotrace.so.0.0.5
+ipo: remark #11000: performing multi-file optimizations
+ipo: remark #11074: Inlining inhibited by limit max-size 
+ipo: remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+ipo: remark #11006: generating object file /tmp/ipo_icc99xTDg.o
+libtool: link: (cd ".libs" && rm -f "libpotrace.so.0" && ln -s "libpotrace.so.0.0.5" "libpotrace.so.0")
+libtool: link: (cd ".libs" && rm -f "libpotrace.so" && ln -s "libpotrace.so.0.0.5" "libpotrace.so")
+libtool: link: xiar.pl cru .libs/libpotrace.a  curve.o trace.o decompose.o potracelib.o
+xiar: executing 'ar'
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libpotrace.a
+libtool: link: ( cd ".libs" && rm -f "libpotrace.la" && ln -s "../libpotrace.la" "libpotrace.la" )
+/bin/bash ../libtool  --tag=CC   --mode=link icc.pl  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security   -o potrace main.o bitmap_io.o backend_eps.o flate.o greymap.o render.o backend_pgm.o backend_svg.o backend_xfig.o backend_dxf.o backend_pdf.o backend_geojson.o lzw.o progress_bar.o bbox.o trans.o libpotrace.la  -lm  -lz 
+libtool: link: icc.pl -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -o .libs/potrace main.o bitmap_io.o backend_eps.o flate.o greymap.o render.o backend_pgm.o backend_svg.o backend_xfig.o backend_dxf.o backend_pdf.o backend_geojson.o lzw.o progress_bar.o bbox.o trans.o  ./.libs/libpotrace.so -lm -lz
+ipo: remark #11000: performing multi-file optimizations
+ipo: remark #11074: Inlining inhibited by limit max-size 
+ipo: remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+ipo: remark #11006: generating object file /tmp/ipo_iccfCitkk.o
+icc.pl -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -c -o mkbitmap.o mkbitmap.c
+mkbitmap.c(390) (col. 81): remark #869: parameter "outfile" was never referenced
+remark #11074: Inlining inhibited by limit max-size 
+remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+/bin/bash ../libtool  --tag=CC   --mode=link icc.pl  -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security   -o mkbitmap mkbitmap.o bitmap_io.o greymap.o -lm 
+libtool: link: icc.pl -g -O2 -fdebug-prefix-map=/home/richard/potrace/potrace-1.15=. -Wformat -march=native -pipe -Wformat-security -o mkbitmap mkbitmap.o bitmap_io.o greymap.o  -lm
+ipo: remark #11000: performing multi-file optimizations
+ipo: remark #11074: Inlining inhibited by limit max-size 
+ipo: remark #11076: To get full report use -qopt-report=4 -qopt-report-phase ipo
+ipo: remark #11006: generating object file /tmp/ipo_icci6HFtp.o
+make[3]: Leaving directory '/home/richard/potrace/potrace-1.15/src'
+Making all in doc
+make[3]: Entering directory '/home/richard/potrace/potrace-1.15/doc'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/richard/potrace/potrace-1.15/doc'
+Making all in check
+make[3]: Entering directory '/home/richard/potrace/potrace-1.15/check'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/richard/potrace/potrace-1.15/check'
+make[3]: Entering directory '/home/richard/potrace/potrace-1.15'
+make[3]: Leaving directory '/home/richard/potrace/potrace-1.15'
+make[2]: Leaving directory '/home/richard/potrace/potrace-1.15'
+make[1]: Leaving directory '/home/richard/potrace/potrace-1.15'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary  --with autoreconf
+dh: warning: line 1 of /etc/dpkg/buildflags.conf is invalid, it has been ignored
+   dh_auto_test
+   dh_testroot
+   dh_prep
+	rm -f -- debian/potrace.substvars debian/libpotrace0.substvars debian/libpotrace-dev.substvars
+	rm -fr -- debian/.debhelper/generated/potrace/ debian/potrace/ debian/tmp/ debian/.debhelper/generated/libpotrace0/ debian/libpotrace0/ debian/.debhelper/generated/libpotrace-dev/ debian/libpotrace-dev/
+   dh_auto_install
+	install -d debian/potrace debian/libpotrace0 debian/libpotrace-dev
+	make -j1 install DESTDIR=/home/richard/potrace/potrace-1.15/debian/tmp AM_UPDATE_INFO_DIR=no
+make[1]: Entering directory '/home/richard/potrace/potrace-1.15'
+Making install in src
+make[2]: Entering directory '/home/richard/potrace/potrace-1.15/src'
+make[3]: Entering directory '/home/richard/potrace/potrace-1.15/src'
+ /bin/mkdir -p '/home/richard/potrace/potrace-1.15/debian/tmp/usr/lib/x86_64-linux-gnu'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libpotrace.la '/home/richard/potrace/potrace-1.15/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/libpotrace.so.0.0.5 /home/richard/potrace/potrace-1.15/debian/tmp/usr/lib/x86_64-linux-gnu/libpotrace.so.0.0.5
+libtool: install: (cd /home/richard/potrace/potrace-1.15/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libpotrace.so.0.0.5 libpotrace.so.0 || { rm -f libpotrace.so.0 && ln -s libpotrace.so.0.0.5 libpotrace.so.0; }; })
+libtool: install: (cd /home/richard/potrace/potrace-1.15/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libpotrace.so.0.0.5 libpotrace.so || { rm -f libpotrace.so && ln -s libpotrace.so.0.0.5 libpotrace.so; }; })
+libtool: install: /usr/bin/install -c .libs/libpotrace.lai /home/richard/potrace/potrace-1.15/debian/tmp/usr/lib/x86_64-linux-gnu/libpotrace.la
+libtool: install: /usr/bin/install -c .libs/libpotrace.a /home/richard/potrace/potrace-1.15/debian/tmp/usr/lib/x86_64-linux-gnu/libpotrace.a
+libtool: install: chmod 644 /home/richard/potrace/potrace-1.15/debian/tmp/usr/lib/x86_64-linux-gnu/libpotrace.a
+libtool: install: ranlib /home/richard/potrace/potrace-1.15/debian/tmp/usr/lib/x86_64-linux-gnu/libpotrace.a
+libtool: warning: remember to run 'libtool --finish /usr/lib/x86_64-linux-gnu'
+ /bin/mkdir -p '/home/richard/potrace/potrace-1.15/debian/tmp/usr/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c potrace mkbitmap '/home/richard/potrace/potrace-1.15/debian/tmp/usr/bin'
+libtool: warning: 'libpotrace.la' has not been installed in '/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/potrace /home/richard/potrace/potrace-1.15/debian/tmp/usr/bin/potrace
+libtool: install: /usr/bin/install -c mkbitmap /home/richard/potrace/potrace-1.15/debian/tmp/usr/bin/mkbitmap
+ /bin/mkdir -p '/home/richard/potrace/potrace-1.15/debian/tmp/usr/include'
+ /usr/bin/install -c -m 644 potracelib.h '/home/richard/potrace/potrace-1.15/debian/tmp/usr/include'
+make[3]: Leaving directory '/home/richard/potrace/potrace-1.15/src'
+make[2]: Leaving directory '/home/richard/potrace/potrace-1.15/src'
+Making install in doc
+make[2]: Entering directory '/home/richard/potrace/potrace-1.15/doc'
+make[3]: Entering directory '/home/richard/potrace/potrace-1.15/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/richard/potrace/potrace-1.15/debian/tmp/usr/share/doc/potrace'
+ /usr/bin/install -c -m 644 placement.pdf '/home/richard/potrace/potrace-1.15/debian/tmp/usr/share/doc/potrace'
+ /bin/mkdir -p '/home/richard/potrace/potrace-1.15/debian/tmp/usr/share/man/man1'
+ /usr/bin/install -c -m 644 potrace.1 mkbitmap.1 '/home/richard/potrace/potrace-1.15/debian/tmp/usr/share/man/man1'
+make[3]: Leaving directory '/home/richard/potrace/potrace-1.15/doc'
+make[2]: Leaving directory '/home/richard/potrace/potrace-1.15/doc'
+Making install in check
+make[2]: Entering directory '/home/richard/potrace/potrace-1.15/check'
+make[3]: Entering directory '/home/richard/potrace/potrace-1.15/check'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/richard/potrace/potrace-1.15/check'
+make[2]: Leaving directory '/home/richard/potrace/potrace-1.15/check'
+make[2]: Entering directory '/home/richard/potrace/potrace-1.15'
+make[3]: Entering directory '/home/richard/potrace/potrace-1.15'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/richard/potrace/potrace-1.15'
+make[2]: Leaving directory '/home/richard/potrace/potrace-1.15'
+make[1]: Leaving directory '/home/richard/potrace/potrace-1.15'
+   dh_install
+	install -d debian/potrace//usr/bin
+	cp --reflink=auto -a debian/tmp/usr/bin/mkbitmap debian/tmp/usr/bin/potrace debian/potrace//usr/bin/
+	install -d debian/.debhelper/generated/potrace
+	install -d debian/libpotrace0//usr/lib/x86_64-linux-gnu
+	cp --reflink=auto -a debian/tmp/usr/lib/x86_64-linux-gnu/libpotrace.so.0 debian/tmp/usr/lib/x86_64-linux-gnu/libpotrace.so.0.0.5 debian/libpotrace0//usr/lib/x86_64-linux-gnu/
+	install -d debian/.debhelper/generated/libpotrace0
+	install -d debian/libpotrace-dev//usr/include
+	cp --reflink=auto -a debian/tmp/usr/include/potracelib.h debian/libpotrace-dev//usr/include/
+	install -d debian/libpotrace-dev//usr/lib/x86_64-linux-gnu
+	cp --reflink=auto -a debian/tmp/usr/lib/x86_64-linux-gnu/libpotrace.so debian/libpotrace-dev//usr/lib/x86_64-linux-gnu/
+	install -d debian/.debhelper/generated/libpotrace-dev
+   dh_installdocs
+	install -d debian/potrace/usr/share/doc/potrace
+	install -p -m0644 debian/README.Debian debian/potrace/usr/share/doc/potrace/README.Debian
+	install -p -m0644 debian/copyright debian/potrace/usr/share/doc/potrace/copyright
+	install -d debian/libpotrace0/usr/share/doc/libpotrace0
+	install -p -m0644 debian/copyright debian/libpotrace0/usr/share/doc/libpotrace0/copyright
+	install -d debian/libpotrace-dev/usr/share/doc/libpotrace-dev
+	install -p -m0644 debian/copyright debian/libpotrace-dev/usr/share/doc/libpotrace-dev/copyright
+   dh_installchangelogs
+	install -p -m0644 debian/changelog debian/potrace/usr/share/doc/potrace/changelog.Debian
+	install -p -m0644 ./ChangeLog debian/potrace/usr/share/doc/potrace/changelog
+	install -p -m0644 debian/changelog debian/libpotrace0/usr/share/doc/libpotrace0/changelog.Debian
+	install -p -m0644 ./ChangeLog debian/libpotrace0/usr/share/doc/libpotrace0/changelog
+	install -p -m0644 debian/changelog debian/libpotrace-dev/usr/share/doc/libpotrace-dev/changelog.Debian
+	install -p -m0644 ./ChangeLog debian/libpotrace-dev/usr/share/doc/libpotrace-dev/changelog
+   dh_installman
+   dh_perl
+   dh_link
+	rm -f debian/libpotrace0/usr/lib/x86_64-linux-gnu/libpotrace.so.0
+	ln -s libpotrace.so.0.0.5 debian/libpotrace0/usr/lib/x86_64-linux-gnu/libpotrace.so.0
+	rm -f debian/libpotrace-dev/usr/lib/x86_64-linux-gnu/libpotrace.so
+	ln -s libpotrace.so.0.0.5 debian/libpotrace-dev/usr/lib/x86_64-linux-gnu/libpotrace.so
+   dh_strip_nondeterminism
+   dh_compress
+	cd debian/potrace
+	cd debian/libpotrace0
+	cd debian/libpotrace-dev
+	chmod a-x usr/share/doc/libpotrace-dev/changelog usr/share/doc/libpotrace-dev/changelog.Debian
+	chmod a-x usr/share/doc/potrace/changelog usr/share/doc/potrace/changelog.Debian
+	chmod a-x usr/share/doc/libpotrace0/changelog usr/share/doc/libpotrace0/changelog.Debian
+	gzip -9nf usr/share/doc/libpotrace-dev/changelog usr/share/doc/libpotrace-dev/changelog.Debian
+	gzip -9nf usr/share/doc/potrace/changelog usr/share/doc/potrace/changelog.Debian
+	gzip -9nf usr/share/doc/libpotrace0/changelog usr/share/doc/libpotrace0/changelog.Debian
+	cd '/home/richard/potrace/potrace-1.15'
+	cd '/home/richard/potrace/potrace-1.15'
+	cd '/home/richard/potrace/potrace-1.15'
+   dh_fixperms
+	find debian/potrace -true -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/libpotrace0 -true -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/libpotrace-dev -true -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/libpotrace0 ! -type l -a -true -a -true -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/potrace ! -type l -a -true -a -true -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/libpotrace-dev ! -type l -a -true -a -true -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/libpotrace0/usr/share/doc -type f -a -true -a ! -regex 'debian/libpotrace0/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/potrace/usr/share/doc -type f -a -true -a ! -regex 'debian/potrace/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/libpotrace-dev/usr/share/doc -type f -a -true -a ! -regex 'debian/libpotrace-dev/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/libpotrace0/usr/share/doc -type d -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0755
+	find debian/potrace/usr/share/doc -type d -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0755
+	find debian/libpotrace-dev/usr/share/doc -type d -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0755
+	find debian/libpotrace-dev/usr/include -type f -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/potrace -type f \( -name '*.so.*' -o -name '*.so' -o -name '*.la' -o -name '*.a' -o -name '*.js' -o -name '*.css' -o -name '*.scss' -o -name '*.sass' -o -name '*.jpeg' -o -name '*.jpg' -o -name '*.png' -o -name '*.gif' -o -name '*.cmxs' -o -name '*.node' \) -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/libpotrace0 -type f \( -name '*.so.*' -o -name '*.so' -o -name '*.la' -o -name '*.a' -o -name '*.js' -o -name '*.css' -o -name '*.scss' -o -name '*.sass' -o -name '*.jpeg' -o -name '*.jpg' -o -name '*.png' -o -name '*.gif' -o -name '*.cmxs' -o -name '*.node' \) -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/potrace/usr/bin -type f -a -true -a -true -print0 2>/dev/null | xargs -0r chmod a+x
+	find debian/libpotrace-dev -type f \( -name '*.so.*' -o -name '*.so' -o -name '*.la' -o -name '*.a' -o -name '*.js' -o -name '*.css' -o -name '*.scss' -o -name '*.sass' -o -name '*.jpeg' -o -name '*.jpg' -o -name '*.png' -o -name '*.gif' -o -name '*.cmxs' -o -name '*.node' \) -a -true -a -true -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/libpotrace0/usr/lib -type f -name '*.ali' -a -true -a -true -print0 2>/dev/null | xargs -0r chmod uga-w
+	find debian/libpotrace-dev/usr/lib -type f -name '*.ali' -a -true -a -true -print0 2>/dev/null | xargs -0r chmod uga-w
+   dh_missing
+   dh_strip
+	install -d debian/.debhelper/libpotrace0/dbgsym-root/usr/lib/debug/.build-id/05
+	objcopy --only-keep-debug --compress-debug-sections debian/libpotrace0/usr/lib/x86_64-linux-gnu/libpotrace.so.0.0.5 debian/.debhelper/libpotrace0/dbgsym-root/usr/lib/debug/.build-id/05/8a07241f2376a1c5e6c6ded4eb0a136e137eaf.debug
+	install -d debian/.debhelper/potrace/dbgsym-root/usr/lib/debug/.build-id/89
+	objcopy --only-keep-debug --compress-debug-sections debian/potrace/usr/bin/mkbitmap debian/.debhelper/potrace/dbgsym-root/usr/lib/debug/.build-id/89/71ac8e0eec06243d43c6e08832268d48615a06.debug
+	chmod 0644 -- debian/.debhelper/libpotrace0/dbgsym-root/usr/lib/debug/.build-id/05/8a07241f2376a1c5e6c6ded4eb0a136e137eaf.debug
+	chown 0:0 -- debian/.debhelper/libpotrace0/dbgsym-root/usr/lib/debug/.build-id/05/8a07241f2376a1c5e6c6ded4eb0a136e137eaf.debug
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/libpotrace0/usr/lib/x86_64-linux-gnu/libpotrace.so.0.0.5
+	objcopy --add-gnu-debuglink debian/.debhelper/libpotrace0/dbgsym-root/usr/lib/debug/.build-id/05/8a07241f2376a1c5e6c6ded4eb0a136e137eaf.debug debian/libpotrace0/usr/lib/x86_64-linux-gnu/libpotrace.so.0.0.5
+	chmod 0644 -- debian/.debhelper/potrace/dbgsym-root/usr/lib/debug/.build-id/89/71ac8e0eec06243d43c6e08832268d48615a06.debug
+	chown 0:0 -- debian/.debhelper/potrace/dbgsym-root/usr/lib/debug/.build-id/89/71ac8e0eec06243d43c6e08832268d48615a06.debug
+	strip --remove-section=.comment --remove-section=.note debian/potrace/usr/bin/mkbitmap
+	objcopy --add-gnu-debuglink debian/.debhelper/potrace/dbgsym-root/usr/lib/debug/.build-id/89/71ac8e0eec06243d43c6e08832268d48615a06.debug debian/potrace/usr/bin/mkbitmap
+	install -d debian/.debhelper/libpotrace0/dbgsym-root/usr/share/doc
+	ln -s libpotrace0 debian/.debhelper/libpotrace0/dbgsym-root/usr/share/doc/libpotrace0-dbgsym
+	install -d debian/.debhelper/potrace/dbgsym-root/usr/lib/debug/.build-id/21
+	objcopy --only-keep-debug --compress-debug-sections debian/potrace/usr/bin/potrace debian/.debhelper/potrace/dbgsym-root/usr/lib/debug/.build-id/21/a09ab1723167ab7e1f3780a989631e82dff4c8.debug
+	chmod 0644 -- debian/.debhelper/potrace/dbgsym-root/usr/lib/debug/.build-id/21/a09ab1723167ab7e1f3780a989631e82dff4c8.debug
+	chown 0:0 -- debian/.debhelper/potrace/dbgsym-root/usr/lib/debug/.build-id/21/a09ab1723167ab7e1f3780a989631e82dff4c8.debug
+	strip --remove-section=.comment --remove-section=.note debian/potrace/usr/bin/potrace
+	objcopy --add-gnu-debuglink debian/.debhelper/potrace/dbgsym-root/usr/lib/debug/.build-id/21/a09ab1723167ab7e1f3780a989631e82dff4c8.debug debian/potrace/usr/bin/potrace
+	install -d debian/.debhelper/potrace/dbgsym-root/usr/share/doc
+	ln -s potrace debian/.debhelper/potrace/dbgsym-root/usr/share/doc/potrace-dbgsym
+   dh_makeshlibs
+	rm -f debian/potrace/DEBIAN/shlibs
+	rm -f debian/libpotrace0/DEBIAN/shlibs
+	install -d debian/libpotrace0/DEBIAN
+	echo "libpotrace 0 libpotrace0" >> debian/libpotrace0/DEBIAN/shlibs
+	chmod 0644 -- debian/libpotrace0/DEBIAN/shlibs
+	chown 0:0 -- debian/libpotrace0/DEBIAN/shlibs
+	mv debian/.debhelper/generated/libpotrace0/triggers.new debian/.debhelper/generated/libpotrace0/triggers
+	rm -f debian/libpotrace-dev/DEBIAN/shlibs
+   dh_shlibdeps
+	dpkg-shlibdeps -Tdebian/libpotrace0.substvars debian/libpotrace0/usr/lib/x86_64-linux-gnu/libpotrace.so.0.0.5
+	install -d debian/potrace/DEBIAN
+	dpkg-shlibdeps -Tdebian/potrace.substvars debian/potrace/usr/bin/mkbitmap debian/potrace/usr/bin/potrace
+dpkg-shlibdeps: warning: /usr/lib/x86_64-linux-gnu/libiomp5.so has an unexpected SONAME (libomp.so.5)
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libpotrace0/usr/lib/x86_64-linux-gnu/libpotrace.so.0.0.5 was not linked against libdl.so.2 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libpotrace0/usr/lib/x86_64-linux-gnu/libpotrace.so.0.0.5 was not linked against libgcc_s.so.1 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: /usr/lib/x86_64-linux-gnu/libiomp5.so has an unexpected SONAME (libomp.so.5)
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/potrace/usr/bin/potrace debian/potrace/usr/bin/mkbitmap were not linked against libgcc_s.so.1 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/potrace/usr/bin/potrace debian/potrace/usr/bin/mkbitmap were not linked against libdl.so.2 (they use none of the library's symbols)
+   dh_installdeb
+	install -p -m0644 debian/.debhelper/generated/libpotrace0/triggers debian/libpotrace0/DEBIAN/triggers
+	install -d debian/libpotrace-dev/DEBIAN
+   dh_gencontrol
+	echo misc:Depends= >> debian/libpotrace-dev.substvars
+	echo misc:Pre-Depends= >> debian/libpotrace-dev.substvars
+	dpkg-gencontrol -plibpotrace-dev -ldebian/changelog -Tdebian/libpotrace-dev.substvars -Pdebian/libpotrace-dev
+	echo misc:Depends= >> debian/libpotrace0.substvars
+	echo misc:Pre-Depends= >> debian/libpotrace0.substvars
+	install -d debian/.debhelper/libpotrace0/dbgsym-root/DEBIAN
+	dpkg-gencontrol -plibpotrace0 -ldebian/changelog -Tdebian/libpotrace0.substvars -Pdebian/.debhelper/libpotrace0/dbgsym-root -UPre-Depends -URecommends -USuggests -UEnhances -UProvides -UEssential -UConflicts -DPriority=optional -UHomepage -UImportant -DAuto-Built-Package=debug-symbols -DPackage=libpotrace0-dbgsym "-DDepends=libpotrace0 (= \${binary:Version})" "-DDescription=debug symbols for libpotrace0" -DBuild-Ids=058a07241f2376a1c5e6c6ded4eb0a136e137eaf -DSection=debug -UReplaces -UBreaks
+	echo misc:Depends= >> debian/potrace.substvars
+	echo misc:Pre-Depends= >> debian/potrace.substvars
+	install -d debian/.debhelper/potrace/dbgsym-root/DEBIAN
+	dpkg-gencontrol -ppotrace -ldebian/changelog -Tdebian/potrace.substvars -Pdebian/.debhelper/potrace/dbgsym-root -UPre-Depends -URecommends -USuggests -UEnhances -UProvides -UEssential -UConflicts -DPriority=optional -UHomepage -UImportant -DAuto-Built-Package=debug-symbols -DPackage=potrace-dbgsym "-DDepends=potrace (= \${binary:Version})" "-DDescription=debug symbols for potrace" "-DBuild-Ids=21a09ab1723167ab7e1f3780a989631e82dff4c8 8971ac8e0eec06243d43c6e08832268d48615a06" -DSection=debug -UMulti-Arch -UReplaces -UBreaks
+	chmod 0644 -- debian/libpotrace-dev/DEBIAN/control
+	chown 0:0 -- debian/libpotrace-dev/DEBIAN/control
+	chmod 0644 -- debian/.debhelper/potrace/dbgsym-root/DEBIAN/control
+	chown 0:0 -- debian/.debhelper/potrace/dbgsym-root/DEBIAN/control
+	dpkg-gencontrol -ppotrace -ldebian/changelog -Tdebian/potrace.substvars -Pdebian/potrace -UMulti-Arch
+	chmod 0644 -- debian/.debhelper/libpotrace0/dbgsym-root/DEBIAN/control
+	chown 0:0 -- debian/.debhelper/libpotrace0/dbgsym-root/DEBIAN/control
+	dpkg-gencontrol -plibpotrace0 -ldebian/changelog -Tdebian/libpotrace0.substvars -Pdebian/libpotrace0
+	chmod 0644 -- debian/potrace/DEBIAN/control
+	chown 0:0 -- debian/potrace/DEBIAN/control
+	chmod 0644 -- debian/libpotrace0/DEBIAN/control
+	chown 0:0 -- debian/libpotrace0/DEBIAN/control
+   dh_md5sums
+	cd debian/potrace >/dev/null && xargs -r0 md5sum | perl -pe 'if (s@^\\@@) { s/\\\\/\\/g; }' > DEBIAN/md5sums
+	cd debian/libpotrace0 >/dev/null && xargs -r0 md5sum | perl -pe 'if (s@^\\@@) { s/\\\\/\\/g; }' > DEBIAN/md5sums
+	cd debian/libpotrace-dev >/dev/null && xargs -r0 md5sum | perl -pe 'if (s@^\\@@) { s/\\\\/\\/g; }' > DEBIAN/md5sums
+	chmod 0644 -- debian/potrace/DEBIAN/md5sums
+	chown 0:0 -- debian/potrace/DEBIAN/md5sums
+	chmod 0644 -- debian/libpotrace-dev/DEBIAN/md5sums
+	chown 0:0 -- debian/libpotrace-dev/DEBIAN/md5sums
+	chmod 0644 -- debian/libpotrace0/DEBIAN/md5sums
+	chown 0:0 -- debian/libpotrace0/DEBIAN/md5sums
+	cd debian/.debhelper/potrace/dbgsym-root >/dev/null && xargs -r0 md5sum | perl -pe 'if (s@^\\@@) { s/\\\\/\\/g; }' > DEBIAN/md5sums
+	cd debian/.debhelper/libpotrace0/dbgsym-root >/dev/null && xargs -r0 md5sum | perl -pe 'if (s@^\\@@) { s/\\\\/\\/g; }' > DEBIAN/md5sums
+	chmod 0644 -- debian/.debhelper/potrace/dbgsym-root/DEBIAN/md5sums
+	chown 0:0 -- debian/.debhelper/potrace/dbgsym-root/DEBIAN/md5sums
+	chmod 0644 -- debian/.debhelper/libpotrace0/dbgsym-root/DEBIAN/md5sums
+	chown 0:0 -- debian/.debhelper/libpotrace0/dbgsym-root/DEBIAN/md5sums
+   dh_builddeb
+	dpkg-deb --build debian/potrace ..
+	dpkg-deb --build debian/.debhelper/potrace/dbgsym-root ..
+	dpkg-deb --build debian/libpotrace0 ..
+	dpkg-deb --build debian/.debhelper/libpotrace0/dbgsym-root ..
+	dpkg-deb --build debian/libpotrace-dev ..
+dpkg-deb: building package 'potrace-dbgsym' in '../potrace-dbgsym_1.15-1_amd64.deb'.
+dpkg-deb: building package 'potrace' in '../potrace_1.15-1_amd64.deb'.
+dpkg-deb: building package 'libpotrace0' in '../libpotrace0_1.15-1_amd64.deb'.
+dpkg-deb: building package 'libpotrace-dev' in '../libpotrace-dev_1.15-1_amd64.deb'.
+dpkg-deb: building package 'libpotrace0-dbgsym' in '../libpotrace0-dbgsym_1.15-1_amd64.deb'.
+ dpkg-genbuildinfo --build=binary
+dpkg-genbuildinfo: warning: line 1 of /etc/dpkg/buildflags.conf is invalid, it has been ignored
+ dpkg-genchanges --build=binary >../potrace_1.15-1_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source -Zxz -z1 --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian potrace_1.15-1_amd64.changes ...
+E: potrace changes: bad-distribution-in-changes-file unstable
+W: potrace: hardening-no-pie usr/bin/mkbitmap
+W: potrace: hardening-no-pie usr/bin/potrace
+W: potrace: binary-without-manpage usr/bin/mkbitmap
+W: potrace: binary-without-manpage usr/bin/potrace
+Finished running lintian.

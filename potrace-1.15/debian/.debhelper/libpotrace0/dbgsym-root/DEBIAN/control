@@ -1,0 +1,13 @@
+Package: libpotrace0-dbgsym
+Source: potrace
+Version: 1.15-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Bartosz Fenski <fenio@debian.org>
+Installed-Size: 39
+Depends: libpotrace0 (= 1.15-1)
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libpotrace0
+Build-Ids: 058a07241f2376a1c5e6c6ded4eb0a136e137eaf

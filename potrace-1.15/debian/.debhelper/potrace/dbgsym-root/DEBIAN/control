@@ -1,0 +1,12 @@
+Package: potrace-dbgsym
+Source: potrace
+Version: 1.15-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Bartosz Fenski <fenio@debian.org>
+Installed-Size: 136
+Depends: potrace (= 1.15-1)
+Section: debug
+Priority: optional
+Description: debug symbols for potrace
+Build-Ids: 21a09ab1723167ab7e1f3780a989631e82dff4c8 8971ac8e0eec06243d43c6e08832268d48615a06
